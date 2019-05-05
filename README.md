@@ -8,3 +8,5 @@ The first version will be text based and simply exit after the game has complete
 Thanks for checking out my program!
 
 TTreit
+A little about me - I am a sound engineer who can no longer physically move the gear required in my line of work so I am teaching myself to be a software developer.
+
