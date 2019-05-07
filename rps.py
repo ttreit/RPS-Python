@@ -1,4 +1,4 @@
-### Create a simple rock, paper, scissors game in java script
+### Create a simple rock, paper, scissors game in Python
 
 # # Create a way for the user to select their weapon of choice
 # # Create a way for the computer to select a weapon
