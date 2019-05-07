@@ -36,6 +36,6 @@ Future features
  - Add graphics
  - Animate graphics
  - 'Friends' verson with fire and water baloon - possibly make this a random event from the computer
- 
+ - Random events happen e.g "Gandalf leaps in front of the Balrog to give you another chance" 
 Test Cases
 TBD
