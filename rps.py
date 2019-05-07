@@ -11,16 +11,19 @@
 import random
 
 def choose_weapon_player():    
-    weapon_player = '0'
-    while weapon_player not in ['1', '2', '3']:
-        weapon_player = input('Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors\n\nSelect your weapon: ')
-        if weapon_player == '1':
+    weapon_player = 0
+    while weapon_player not in [1, 2, 3]:
+        try:
+            weapon_player = int(input('Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors\n\nSelect your weapon: '))
+        except Exception:
+            weapon_player = 0
+        if weapon_player == 1:
             print('\nYour weapon is a mighty rock!\n')
 
-        elif weapon_player == '2': 
+        elif weapon_player == 2: 
             print('\nYour weapon is a smooth piece of paper!\n') 
 
-        elif weapon_player == '3':
+        elif weapon_player == 3:
             print('\nYour weapon is a pair of sharp scissors!\n')
 
         else:
@@ -38,6 +41,10 @@ def choose_weapon_computer():
             print('Donald Trump jumps at you with a pair of sharp scissors!\n')
     
     else: print('check for error')
+
+def compare_weapons():
+    pass
+
 
 def main():
     choose_weapon_player()
