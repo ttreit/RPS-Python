@@ -14,23 +14,28 @@
 #Ask if user wants to play again
 #Have option to list the rules of the game
 
-def choose_weapon():
-    weapon = input('Press 1 for Rock: \nPress 2 for Paper: \nPress 3 for Scissors:\n')
-    if weapon == '1':
-        print('Your weapon is a mighty rock!')
-        weapon == 'rock'
-    elif weapon == '2': 
-        print('Your weapon is a smooth piece of paper!') 
-        weapon == 'paper'
-    elif weapon == '3':
-        print('Your weapon is a pair of sharp scissors!')
-        weapon == 'scissors'
-    else:
-        print('Sorry, that\'s not one of your options, try again.')
-    # Go back to the top...how to do that? Call function again? 
+def player_choose_weapon():    
+    weapon = 0
+    while weapon not in ['1', '2', '3']:
+        weapon = input('Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors\n\nSelect your weapon: ')
+        if weapon == '1':
+            print('Your weapon is a mighty rock!\n')
+
+        elif weapon == '2': 
+            print('Your weapon is a smooth piece of paper!\n') 
+
+        elif weapon == '3':
+            print('Your weapon is a pair of sharp scissors!\n')
+
+        else:
+            print('Sorry, that\'s not available, try again.\n')
+       
+# def computer_choose_weapon():
  
 def main():
-    choose_weapon()
+    player_choose_weapon()
+    # computer_choose_weapon()
+    print('End of main\n') #test that we completed main
 
 
 if __name__ == '__main__':
