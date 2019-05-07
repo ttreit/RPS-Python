@@ -1,40 +1,47 @@
 ### Create a simple rock, paper, scissors game in java script
 
-#Add Welcome messaage
-#1.1 Ask user how many games they'd like to play (best 3 out of 5 etc)
-#Ask user to select rock, paper, or scissors
-#Press 1 for Rock <br>Press 2 for Paper<br>Press 3 for Scissors");
-#Get the input from the user
-#Show them their selection
-#Have computer randomly select rock, paper, or scissors
-#Display computer selection
-#Determine outcome
-    #paper beats rock, rock beats scissors, scissors beats paper
-#Display win, lose, tie message
-#Ask if user wants to play again
-#Have option to list the rules of the game
+# # Create a way for the user to select their weapon of choice
+# # Create a way for the computer to select a weapon
+# # Compare the two weapons
+# # Determine if the outcome is a tie
+# #  - if tie replay
+# # Declare the winner
+# # Ask to play again
 
-def player_choose_weapon():    
-    weapon = 0
-    while weapon not in ['1', '2', '3']:
-        weapon = input('Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors\n\nSelect your weapon: ')
-        if weapon == '1':
-            print('Your weapon is a mighty rock!\n')
+import random
 
-        elif weapon == '2': 
-            print('Your weapon is a smooth piece of paper!\n') 
+def choose_weapon_player():    
+    weapon_player = '0'
+    while weapon_player not in ['1', '2', '3']:
+        weapon_player = input('Press 1 for Rock \nPress 2 for Paper \nPress 3 for Scissors\n\nSelect your weapon: ')
+        if weapon_player == '1':
+            print('\nYour weapon is a mighty rock!\n')
 
-        elif weapon == '3':
-            print('Your weapon is a pair of sharp scissors!\n')
+        elif weapon_player == '2': 
+            print('\nYour weapon is a smooth piece of paper!\n') 
+
+        elif weapon_player == '3':
+            print('\nYour weapon is a pair of sharp scissors!\n')
 
         else:
-            print('Sorry, that\'s not available, try again.\n')
+            print('\nSorry, that\'s not available, try again.\n')
        
-# def computer_choose_weapon():
- 
+def choose_weapon_computer():
+    weapon_computer = random.randint(1, 3)
+    if weapon_computer == 1:
+            print('Your sworn enemy\'s weapon is a rock!\n') #feature - randomize 'your sworn enemy' etc.        
+
+    elif weapon_computer == 2: 
+            print('The enemy pulls out a piece of paper!\n') 
+
+    elif weapon_computer == 3:
+            print('Donald Trump jumps at you with a pair of sharp scissors!\n')
+    
+    else: print('check for error')
+
 def main():
-    player_choose_weapon()
-    # computer_choose_weapon()
+    choose_weapon_player()
+    choose_weapon_computer()
     print('End of main\n') #test that we completed main
 
 
