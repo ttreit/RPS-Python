@@ -43,12 +43,18 @@ def choose_weapon_computer():
     else: print('check for error')
 
 def compare_weapons():
-    pass
+    if weapon_player == weapon_computer:
+        print('It\'s a tie!')
+    elif weapon_player = 1 AND weapon_computer = 2:
+        print('Paper covers Rock\pYou lose!')
+    elif weapon_p
 
 
 def main():
     choose_weapon_player()
     choose_weapon_computer()
+    compare_weapons()
+
     print('End of main\n') #test that we completed main
 
 
