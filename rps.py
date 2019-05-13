@@ -3,6 +3,7 @@
 #import libraries
 import random
 import enum
+import os
 
 #Define classes
 class Weapon(enum.Enum):
@@ -51,13 +52,25 @@ def compare_weapons(weapon_player, weapon_computer):
       print('Rock smashes scissors.\n\nYou Lose!')
     elif weapon_player == 3 and weapon_computer == 2:
         print('Scissors cuts paper!\n\nYou Win!')
+def play_again():
+    print()
+    play = input('Press "P" to play again: ' )
+    print()
+    if play == 'p' or play == 'P':
+        main()
+    else:
+        print('\n')
+
+
+
 
 ##MAIN PROGRAM##
 def main():
+    os.system('clear')
     player_weapon = choose_weapon_player()
     computer_weapon = choose_weapon_computer()
     compare_weapons(player_weapon, computer_weapon)
-    print('\n\n\n')
+    play_again()
 
 
 if __name__ == '__main__':
